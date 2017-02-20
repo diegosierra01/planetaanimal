@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+	<script type="text/javascript" src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/main.css">
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,700italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../../css/animate.css">
+	<link rel="stylesheet" href="../../css/toggle.css">
+	<script type="text/javascript" src="../../js/validar.js"></script>
+	<title>Centro Medico Veterinario Planeta Animal Tunja</title>
+</head>
+<body>
+	<nav class='se-gris padding-largo text-center'>
+		<ul class="no-lista inline-block azul">
+			<li class="col-md-3">
+				<a href="../../index.html" class="verde pacifico">Planeta Animal</a>
+			</li>
+			<li class="col-md-3">
+				<a href="../../servicios.php">Servicios</a>
+			</li>
+			<li class="col-md-3">
+				<a href="../../contacto.html">Contacto</a>
+			</li>
+		</ul>
+	</nav>
+
+
+	<nav role="navigation" class="navbar navbar-default">
+		<div class="navbar-header">
+			<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>			
+		</div>
+		<div id="navbarCollapse" class="collapse navbar-collapse">
+			<ul class="nav nav-tabs">
+				<li><a href="propietario.php">Propietario</a></li>
+				<li><a href="mascota.html">Mascota</a></li>
+				<li><a href="consulta.html">Consulta</a></li>
+				<li><a href="digestivo.html">Sistema digestivo</a></li>
+				<li><a href="respiratorio.html">Sistema respiratorio</a></li>
+				<li><a href="cardiovascular.html">Sistema cardiovascular</a></li>
+				<li><a href="integumentario.html">Sistema integumentario</a></li>
+				<li><a href="musculo-esqueletico.html">Sistema musculo-esquelético</a></li>
+				<li><a href="nervioso.html">Sistema nervioso</a></li>
+				<li><a href="inspeccion.html">Inspección</a></li>
+				<li class="active"><a href="reflejos.html">Reflejos espinales</a></li>
+				<li><a href="sentidos.html">Organos de los sentidos</a></li>
+				<li><a href="ganglios.html">Ganglios linfáticos</a></li>
+				<li><a href="genitales.html">Genitales</a></li>
+				<li><a href="vacunas.html">Vacunas</a></li>
+			</ul>
+			
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="page-header">			
+			<h1>Reflejos espinales<small> Miembro anterior</small>
+				<label class="toggle input-lg pull-right">
+					<input type="checkbox" class="toggle_input" onclick="validar(this)" checked>
+					<div class="toggle-control"></div>
+				</label>
+			</h1>
+		</div>	
+
+		<form class="form-horizontal" method="post" name="form" action="../../php/guardarReflejos.php">
+			<div class="form-group">
+				<label class="control-label col-xs-2">Bicipital:</label>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="bicipital" value="0"> Ausente
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="bicipital" value="1"> Disminuido
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="bicipital" value="2"> Normal
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="bicipital" value="3"> Aumentado
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="bicipital" value="4"> Aumentado con clonos
+					</label>
+				</div>				
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-2">Triceps:</label>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="triceps" value="0"> Ausente
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="triceps" value="1"> Disminuido
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="triceps" value="2"> Normal
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="triceps" value="3"> Aumentado
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="triceps" value="4"> Aumentado con clonos
+					</label>
+				</div>				
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-2">Flexor:</label>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="flexor1" value="0"> Ausente
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="flexor1" value="1"> Disminuido
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="flexor1" value="2"> Normal
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="flexor1" value="3"> Aumentado
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="flexor1" value="4"> Aumentado con clonos
+					</label>
+				</div>				
+			</div>
+
+			<div class="container">
+				<div class="page-header">
+					<h1>Reflejos espinales <small> Miembro posterior</small></h1>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-2">Flexor:</label>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="flexor2" value="0"> Ausente
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="flexor2" value="1"> Disminuido
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="flexor2" value="2"> Normal
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="flexor2" value="3"> Aumentado
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="flexor2" value="4"> Aumentado con clonos
+					</label>
+				</div>				
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-2">Patelar:</label>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="patelar" value="0"> Ausente
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="patelar" value="1"> Disminuido
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="patelar" value="2"> Normal
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="patelar" value="3"> Aumentado
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="patelar" value="4"> Aumentado con clonos
+					</label>
+				</div>				
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-2">Tibial craneal:</label>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="tibial" value="0"> Ausente
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="tibial" value="1"> Disminuido
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="tibial" value="2"> Normal
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="tibial" value="3"> Aumentado
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="tibial" value="4"> Aumentado con clonos
+					</label>
+				</div>				
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-2">Gastronemio:</label>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="gastronemio" value="0"> Ausente
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="gastronemio" value="1"> Disminuido
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="gastronemio" value="2"> Normal
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="gastronemio" value="3"> Aumentado
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="gastronemio" value="4"> Aumentado con clonos
+					</label>
+				</div>				
+			</div>
+			<div class="container">
+				<div class="page-header">
+					<h1>Reflejos espinales <small> Otros</small></h1>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-2">Extensor cruzado:</label>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="extensor" value="0"> Ausente
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="extensor" value="1"> Disminuido
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="extensor" value="2"> Normal
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="extensor" value="3"> Aumentado
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="extensor" value="4"> Aumentado con clonos
+					</label>
+				</div>				
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-2">Sensibilidad superficial:</label>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="superficial" value="0"> Ausente
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="superficial" value="1"> Disminuido
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="superficial" value="2"> Normal
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="superficial" value="3"> Aumentado
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="superficial" value="4"> Aumentado con clonos
+					</label>
+				</div>				
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-2"> Sensibilidad profunda:</label>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="profunda" value="0"> Ausente
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="profunda" value="1"> Disminuido
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="profunda" value="2"> Normal
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="profunda" value="3"> Aumentado
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="profunda" value="4"> Aumentado con clonos
+					</label>
+				</div>				
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-2">Reflejo anal:</label>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="anal" value="0"> Ausente
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="anal" value="1"> Disminuido
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="anal" value="2"> Normal
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="anal" value="3"> Aumentado
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="anal" value="4"> Aumentado con clonos
+					</label>
+				</div>				
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-2">Panicular:</label>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="panicular" value="0"> Ausente
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="panicular" value="1"> Disminuido
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="panicular" value="2"> Normal
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="panicular" value="3"> Aumentado
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="panicular" value="4"> Aumentado con clonos
+					</label>
+				</div>				
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-2">Coccígeo:</label>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="coccigeo" value="0"> Ausente
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="coccigeo" value="1"> Disminuido
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="coccigeo" value="2"> Normal
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="coccigeo" value="3"> Aumentado
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="coccigeo" value="4"> Aumentado con clonos
+					</label>
+				</div>				
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-2">R. micción:</label>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="miccion" value="0"> Ausente
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="miccion" value="1"> Disminuido
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="miccion" value="2"> Normal
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="miccion" value="3"> Aumentado
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="miccion" value="4"> Aumentado con clonos
+					</label>
+				</div>				
+			</div>
+			<br>
+			<div class="form-group">
+				<div class="col-xs-offset-3 col-xs-9">
+					<input type="reset" class="btn btn-default" value="Limpiar">
+					<input type="submit" class="btn btn-primary" value="Guardar">
+				</div>
+			</div>
+		</form>
+	</div>
+	<br><br>
+</body>
+</html>

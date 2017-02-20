@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+	<script type="text/javascript" src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/main.css">
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,700italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../../css/animate.css">
+	<link rel="stylesheet" href="../../css/toggle.css">
+	<script type="text/javascript" src="../../js/validar.js"></script>
+	<title>Centro Medico Veterinario Planeta Animal Tunja</title>
+</head>
+<body>
+	<nav class='se-gris padding-largo text-center'>
+		<ul class="no-lista inline-block azul">
+			<li class="col-md-3">
+				<a href="../../index.html" class="verde pacifico">Planeta Animal</a>
+			</li>
+			<li class="col-md-3">
+				<a href="../../servicios.php">Servicios</a>
+			</li>
+			<li class="col-md-3">
+				<a href="../../contacto.html">Contacto</a>
+			</li>
+		</ul>
+	</nav>
+
+
+	<nav role="navigation" class="navbar navbar-default">
+		<div class="navbar-header">
+			<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>			
+		</div>
+		<div id="navbarCollapse" class="collapse navbar-collapse">
+			<ul class="nav nav-tabs">
+				<li><a href="propietario.php">Propietario</a></li>
+				<li><a href="mascota.html">Mascota</a></li>
+				<li><a href="consulta.html">Consulta</a></li>
+				<li><a href="digestivo.html">Sistema digestivo</a></li>
+				<li><a href="respiratorio.html">Sistema respiratorio</a></li>
+				<li class="active"><a href="cardiovascular.html">Sistema cardiovascular</a></li>
+				<li><a href="integumentario.html">Sistema integumentario</a></li>
+				<li><a href="musculo-esqueletico.html">Sistema musculo-esquelético</a></li>
+				<li><a href="nervioso.html">Sistema nervioso</a></li>
+				<li><a href="inspeccion.html">Inspección</a></li>
+				<li><a href="reflejos.html">Reflejos espinales</a></li>
+				<li><a href="sentidos.html">Organos de los sentidos</a></li>
+				<li><a href="ganglios.html">Ganglios linfáticos</a></li>
+				<li><a href="genitales.html">Genitales</a></li>
+				<li><a href="vacunas.html">Vacunas</a></li>
+			</ul>
+			
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="page-header">			
+			<h1>Sistema cardiovascular<small> Organos</small>
+				<label class="toggle input-lg pull-right">
+					<input type="checkbox" class="toggle_input" onclick="validar(this)" checked>
+					<div class="toggle-control"></div>
+				</label>
+			</h1>
+		</div>	
+
+		<form class="form-horizontal" method="post" name="form" action="../../php/guardarCardiovascular.php" >
+			<div class="form-group">
+				<label class="control-label col-xs-3">Membrana oral:</label>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="oral" value="N"> Normal
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="oral" value="A"> Anormal
+					</label>
+				</div>
+				<div class="col-xs-4">
+					<input type="text" class="form-control input-sm" placeholder="Comentario" name="comOral">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-3">Membrana conjuntiva:</label>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="conjuntiva" value="N"> Normal
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="conjuntiva" value="A"> Anormal
+					</label>
+				</div>
+				<div class="col-xs-4">
+					<input type="text" class="form-control input-sm" placeholder="Comentario" name="comConjuntiva">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-3">Membrana vaginal o prepucial:</label>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="vaginal-prepucial" value="N"> Normal
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="vaginal-prepucial" value="A"> Anormal
+					</label>
+				</div>
+				<div class="col-xs-4">
+					<input type="text" class="form-control input-sm" placeholder="Comentario" name="comvaginal-prepucial">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-3">Soplos:</label>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="soplos" value="N"> Normal
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="soplos" value="A"> Anormal
+					</label>
+				</div>
+				<div class="col-xs-4">
+					<input type="text" class="form-control input-sm" placeholder="Comentario" name="comSoplos">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-3">Arritmias:</label>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="arritmias" value="N"> Normal
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="arritmias" value="A"> Anormal
+					</label>
+				</div>
+				<div class="col-xs-4">
+					<input type="text" class="form-control input-sm" placeholder="Comentario" name="comArritmias">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-3">TLLC:</label>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="tllc" value="N"> Normal
+					</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="radio-inline">
+						<input type="radio" required name="tllc" value="A"> Anormal
+					</label>
+				</div>
+				<div class="col-xs-4">
+					<input type="text" class="form-control input-sm" placeholder="Comentario" name="comTLLC">
+				</div>
+			</div>
+			
+
+			<br>
+			<div class="form-group">
+				<div class="col-xs-offset-3 col-xs-9">
+					<input type="reset" class="btn btn-default" value="Limpiar">
+					<input type="submit" class="btn btn-primary" value="Guardar">
+				</div>
+			</div>
+		</form>
+	</div>
+	<br><br>
+</body>
+</html>

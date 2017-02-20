@@ -1,0 +1,140 @@
+ <html>
+ <head>
+  <meta charset=utf-8>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,700italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../../css/animate.css">
+  <script type="text/javascript" src="../../js/crear.js"></script>
+  <script type="text/javascript" src="../../js/prueba.js"></script>
+  <link rel="stylesheet" href="../../css/number.css">
+  <title>Centro Medico Veterinario Planeta Animal Tunja</title>
+</head>
+<body>
+ <nav class='se-gris padding-largo text-center'>
+  <ul class="no-lista inline-block azul">
+    <li class="col-md-3">
+      <a href="../../index.html" class="verde pacifico">Planeta Animal</a>
+    </li>
+    <li class="col-md-3">
+      <a href="../../servicios.php">Servicios</a>
+    </li>
+    <li class="col-md-3">
+      <a href="../../contacto.html">Contacto</a>
+    </li>
+  </ul>
+</nav>
+
+<ul class="nav nav-tabs">
+  <li><a href="constantes.html">Constantes fisiológicas</a></li>
+  <li class="active"><a href="diagnostico.html">Diagnóstico</a></li>
+</ul>
+
+<div class="container">
+  <div class="page-header">
+    <h1>Diagnóstico</h1>
+  </div>
+  <form class="form-horizontal" method="post" action="../../php/guardarDiagnostico.php">
+    <div class="form-group">
+      <label class="control-label col-xs-3">Lista de problemas:</label>
+      <div class="col-xs-9" id="listProblema">
+        <div  class="input-group">
+          <input type="text" class="form-control" placeholder="Problema 1" required name="problema[]">
+          <span class="input-group-btn input-sm">
+            <button type="button" class= "btn btn-primary" onclick="crearProblema(this)"><i class="glyphicon glyphicon-plus"></i></button>
+          </span>               
+        </div> 
+        <br>
+      </div>                      
+    </div>
+    <div class="form-group">
+      <label class="control-label col-xs-3">DX. Diferencial:</label>
+      <div class="col-xs-9" id="listDiferencial">
+        <div  class="input-group">
+          <input type="text" class="form-control" placeholder="Diferencial 1" required name="diferencial[]">
+          <span class="input-group-btn input-sm">
+            <button type="button" class= "btn btn-primary" onclick="crearDiferencial(this)"><i class="glyphicon glyphicon-plus"></i></button>
+          </span>               
+        </div> 
+        <br>
+      </div>                      
+    </div>
+    <div class="form-group">
+      <label class="control-label col-xs-3">DX. Presuntivo:</label>
+      <div class="col-xs-9" id="listPresuntivo">
+        <div  class="input-group">
+          <input type="text" class="form-control" placeholder="Presuntivo 1" required name="presuntivo[]">
+          <span class="input-group-btn input-sm">
+            <button type="button" class= "btn btn-primary" onclick="crearPresuntivo(this)"><i class="glyphicon glyphicon-plus"></i></button>
+          </span>               
+        </div> 
+        <br>
+      </div>                      
+    </div>
+    <div class="form-group">
+      <label class="control-label col-xs-3">Exámenes Paraclínicos:</label>
+      <div class="col-xs-9" id="listExamen">
+        <div  class="input-group">
+          <input type="text" class="form-control" placeholder="Examen 1" required name="examen[]">
+          <span class="input-group-btn input-sm">
+            <button type="button" class= "btn btn-primary" onclick="crearExamen(this)"><i class="glyphicon glyphicon-plus"></i></button>
+          </span>               
+        </div> 
+        <br>
+      </div>                      
+    </div>
+    <div class="form-group">
+      <label class="control-label col-xs-3">Pronóstico:</label>
+      <div class="col-xs-9">
+        <textarea rows="3" class="form-control" placeholder="Pronóstico" required name="pronostico"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-xs-3">Tratamiento inicial:</label>
+      <div class="col-xs-9">
+        <textarea rows="3" class="form-control" placeholder="Tratamiento" required name="tratamiento"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-xs-3" >Fecha:</label>
+      <p class="form-control-static col-xs-9" name="tiempo">
+       <script type="text/javascript">
+        var d = new Date(); 
+        document.write(d.getDate() + "/" + (d.getMonth() +1) + "/" + d.getFullYear());
+      </script>
+    </p>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-3">Medicación:</label>
+    <div class="col-xs-9">
+      <textarea rows="3" class="form-control" placeholder="Medicación" required name="medicacion"></textarea>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-3">Evolución:</label>
+    <div class="col-xs-9">
+      <textarea rows="3" class="form-control" placeholder="Evolución" required name="evolucion"></textarea>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-3" >Veterinario:</label>
+    <div class="col-xs-9">
+      <input type="number" class="form-control" placeholder="Cédula" required name="veterinario">
+    </div>
+  </div>
+  <br>
+  <div class="form-group">
+    <div class="col-xs-offset-3 col-xs-9">
+      <input type="reset" class="btn btn-default" value="Limpiar">
+      <input type="submit" class="btn btn-primary" value="Guardar">
+    </div>
+  </div> 
+</form>
+</div>
+<script type="text/javascript" src="../../js/prueba.js">turno()</script>
+<br><br>
+</body>
+</html>
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,700italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/number.css">
+  <title>Centro Medico Veterinario Planeta Animal Tunja</title>
+</head>
+<body>
+  <nav class='se-gris padding-largo text-center'>
+    <ul class="no-lista inline-block azul">
+      <li class="col-md-3">
+        <a href="index.html" class="verde pacifico">Planeta Animal</a>
+      </li>
+      <li class="col-md-3">
+        <a href="servicios.php">Servicios</a>
+      </li>
+      <li class="col-md-3">
+        <a href="contacto.html">Contacto</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+      <div class="row">                
+        <div class="iconmelon col-md-4 center-block quitar-float text-center espacio-arriba">            
+          <img src="imagenes/enfermo.jpg" class="animated tada">
+        </div>
+      </div>
+      <br><br>
+      <div class="panel panel-default" >
+        <div class="panel-heading">
+          <div class="pacifico verde mediano animated tada retraso-1 panel-title text-center">Planeta Animal</div>
+        </div>     
+
+        <div class="panel-body" >
+
+          <form name="form" id="form" class="form-horizontal" method="POST" action="php/login.php">
+
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+              <input id="user" type="number" class="form-control" name="user" value="" required placeholder="Usuario">
+            </div>
+            <br>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+              <input id="password" type="password" class="form-control" name="password" required placeholder="Contraseña">
+            </div>                                                                  
+            <br>
+            <div class="form-group">
+              <!-- Button -->
+              <div class="col-sm-12 controls">
+              
+                <br>
+                <button type="submit" name="login" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-log-in"></i> Entrar</button>                          
+              </div>
+
+            </div>
+
+          </form>   
+
+        </div>                     
+      </div>  
+    </div>
+  </div>
+  <br><br>
+</body>
+</html>
+
+
+
+
+
+
+
